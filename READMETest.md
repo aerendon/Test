@@ -83,137 +83,41 @@ Trailing white spaces are unnecessary and can complicate diffs.
 <p>Yes please.
 ```
 
+##General Meta Rules
+###Encoding
+Use UTF-8 (no BOM).
 
+Make sure your editor uses UTF-8 as character encoding, without a byte order mark.
 
-----------------------------------------------------------------
-## Basics
+Specify the encoding in HTML templates and documents via <meta charset="utf-8">. Do not specify the encoding of style sheets as these assume UTF-8.
 
-### Spaces or tabs.
+(More on encodings and when and how to specify them can be found in [Handling character encodings in HTML and CSS.](http://www.w3.org/International/tutorials/tutorial-char-enc/ "Handling character encodings in HTML and CSS."))
 
-Use two spaces to indent, no tabs.
+###Comment
+Explain code as needed, where possible.
 
-### Line lenght
+Use comments to explain code: What does it cover, what purpose does it serve, why is respective solution used or preferred?
 
-**80**  characters max.
+(This item is optional as it is not deemed a realistic expectation to always demand fully documented code. Mileage may vary heavily for HTML and CSS code and depends on the project’s complexity.)
 
-### Whitespace
+###Action Items
+Mark todos and action items with **TODO**.
 
-No trailing whitespace allowed. Clean up after yourself.
+Highlight todos by using the keyword **TODO** only, not other common formats like **@@**.
 
-### Brackets
+Append a contact (username or mailing list) in parentheses as with the format **TODO(contact).**
 
-Place opening brackets on the same line as the statement.
+Append action items after a colon as in **TODO:** action item.
 
-```c++
-if (cool == true) {
-  // ok!.
-}
-
-if (cool == true)
-{
-  // Not ok!.
-}
+```HTML
+{# TODO(john.doe): revisit centering #}
+<center>Test</center>
+```
+```HTML
+<!-- TODO: remove optional tags -->
+<ul>
+  <li>Apples</li>
+  <li>Oranges</li>
+</ul>
 ```
 
-### Parenthesis
-
-Leave space before and after the parenthesis for `if/while/for/catch/switch/do`
-
-```c++
-// consistent.
-if (something) {
-
-}
-
-// inconsistent.
-if(something){
-
-}
-```
-
-### Naming : variables, functions, classes, ...
-
-As C++ standard, use lower case letters. If the name has many words, they must be separated by underscore
-
-```c++
-// consistent
-int very_cool_name;
-
-// inconsistent.
-int BadExample:
-```
-
-```c++
-// consistent.
-class cool_name {
-
-};
-
-// inconsistent.
-class ThisIsNotJava {
-
-
-};
-```
-
-### Function Spacing
-
-When executing a function, leave no space between it's name and parens.
-
-```c++
-// consistent.
-eatIceCream();
-
-// inconsistent.
-eatIceCream ();
-```
-
-### Return Early
-
-Return early wherever you can to reduce nesting and complexity.
-
-```c++
-int some_calculation(int x) {
-  if (x < 10)
-    return 0;
-
-  int ans = 10;
-  /*
-    Some logic here
-  */
-  return ans;
-}
-```
-
-### One line statements
-
-If a block contains only a single statement it must be placed in a separated line without brackets
-
-```c++
-if (something)
-  call_superman();
-```
-
-### Operators
-
-Unary operators are not separated from the expression in any way:
-```c++
-counter++;
-```
-
-Binary operators should be separated from adjacent expression by spaces:
-```c++
-int z = x + y;
-```
-
-
-## Other stuff
-
-Under construction
-
-
-## Cool references
-
-- [ZeroMQ styleguide](http://zeromq.org/docs:style)
-- [Google styleguide](http://google-styleguide.googlecode.com/svn/trunk/cppguide.html)
-- [Aaron heckmann javascritp styleguide](https://github.com/aheckmann/js-styleguide)
