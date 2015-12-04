@@ -1,4 +1,5 @@
 # HTML/CSS Style Guide
+* [Reference](https://github.com/google/styleguide "Reference")
 
 ## General Style Rules
 ### Protocol
