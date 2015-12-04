@@ -1,5 +1,36 @@
-# C++ style guide
+# HTML/CSS Style Guide
 
+## General Style Rules
+### Protocol
+*Omit the protocol from embedded resources.*
+
+Omit the protocol portion (http:, https:) from URLs pointing to images and other media files, style sheets, and scripts unless the respective files are not available over both protocols.
+
+Omitting the protocol—which makes the URL relative—prevents mixed content issues and results in minor file size savings.
+
+```HTML
+<!-- Not recommended -->
+<script src="http://www.google.com/js/gweb/analytics/autotrack.js"></script>
+```
+```HTML
+<!-- Recommended -->
+<script src="//www.google.com/js/gweb/analytics/autotrack.js"></script>
+```
+```CSS
+/* Not recommended */
+.example {
+  background: url(http://www.google.com/images/example);
+}
+```
+```CSS
+/* Recommended */
+.example {
+  background: url(//www.google.com/images/example);
+}
+```
+
+
+----------------------------------------------------------------
 ## Basics
 
 ### Spaces or tabs.
