@@ -30,6 +30,60 @@ Omitting the protocol—which makes the URL relative—prevents mixed content is
 }
 ```
 
+##General Formatting Rules
+###Indentation
+Indent by 2 spaces at a time.
+
+Don’t use tabs or mix tabs and spaces for indentation.
+
+```HTML
+<ul>
+  <li>Fantastic
+  <li>Great
+</ul>
+```
+```CSS
+.example {
+  color: blue;
+}
+```
+
+###Capitalization
+Use only lowercase.
+
+All code has to be lowercase: This applies to HTML element names, attributes, attribute values (unless text/CDATA), CSS selectors, properties, and property values (with the exception of strings).
+```HTML
+<!-- Not recommended -->
+<A HREF="/">Home</A>
+```
+```HTML
+<!-- Recommended -->
+<img src="google.png" alt="Google">
+```
+```CSS
+/* Not recommended */
+color: #E5E5E5;
+```
+```CSS
+/* Recommended */
+color: #e5e5e5;
+```
+###Trailing Whitespace
+*Trailing whitespace is any spaces or tabs after the last non-whitespace character on the line until the newline.*
+
+Remove trailing white spaces.
+Trailing white spaces are unnecessary and can complicate diffs.
+
+```HTML
+<!-- Not recommended -->
+<p>What?_
+```
+```HTML
+<!-- Recommended -->
+<p>Yes please.
+```
+
+
 
 ----------------------------------------------------------------
 ## Basics
