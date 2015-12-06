@@ -145,7 +145,7 @@ For file size optimization and scannability purposes, consider omitting optional
 <p>Qed.
 ```
 
-###type Attributes
+###Type Attributes
 Omit type attributes for style sheets and scripts.
 
 Do not use type attributes for style sheets (unless not using CSS) and scripts (unless not using JavaScript).
@@ -170,6 +170,54 @@ Specifying type attributes in these contexts is not necessary as HTML5 implies t
 <!-- Recommended -->
 <script src="//www.google.com/js/gweb/analytics/autotrack.js"></script>
 ```
+
+##HTML Formatting Rules
+
+###General Formatting
+Use a new line for every block, list, or table element, and indent every such child element.
+
+Independent of the styling of an element (as CSS allows elements to assume a different role per `display` property), put every block, list, or table element on a new line.
+
+Also, indent them if they are child elements of a block, list, or table element.
+
+(If you run into issues around whitespace between list items it’s acceptable to put all `li` elements in one line. A linter is encouraged to throw a warning instead of an error.)
+```HTML
+<blockquote>
+  <p><em>Space</em>, the final frontier.</p>
+</blockquote>
+```
+```HTML
+<ul>
+  <li>Moe
+  <li>Larry
+  <li>Curly
+</ul>
+```
+```HTML
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Income
+      <th scope="col">Taxes
+  <tbody>
+    <tr>
+      <td>$ 5.00
+      <td>$ 4.50
+</table>
+```
+###HTML Quotation Marks
+When quoting attributes values, use double quotation marks.
+
+Use double ("") rather than single quotation marks ('') around attribute values.
+```HTML
+<!-- Not recommended -->
+<a class='maia-button maia-button-secondary'>Sign in</a>
+```
+```HTML
+<!-- Recommended -->
+<a class="maia-button maia-button-secondary">Sign in</a>
+```
+
 
 
 
